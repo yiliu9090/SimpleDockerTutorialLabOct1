@@ -4,7 +4,7 @@ RUN pip install numpy
 
 RUN mkdir workspace
 
-RUN cp Code workspace 
+COPY Code workspace 
 
 WORKDIR workspace 
 
