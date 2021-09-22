@@ -2,10 +2,12 @@ FROM python:latest
 
 RUN pip install numpy
 
-RUN mkdir workspace
+RUN mkdir /workspace/
 
-COPY Code workspace 
+COPY Code /workspace/
 
-WORKDIR workspace 
+#COPY Example /workspace/
 
-ENTRYPOINT ["python", "Code/run.py"]
+WORKDIR /workspace/
+
+ENTRYPOINT ["python", "run.py"]
