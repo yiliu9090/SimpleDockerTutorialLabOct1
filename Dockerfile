@@ -1,6 +1,11 @@
-FROM ubuntu:latest
-RUN apt update
-RUN apt install python3
-RUN apt install python3-pip
-RUN pip3 install numpy 
+FROM python:latest
 
+RUN pip install numpy
+
+RUN mkdir workspace
+
+RUN cp Code workspace 
+
+WORKDIR workspace 
+
+ENTRYPOINT ["python", "Code/run.py"]
