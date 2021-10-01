@@ -1,7 +1,6 @@
 import sys 
 import json
 import numpy as np
-
 #This is a numpy
 
 arg = sys.argv[1]
